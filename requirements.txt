@@ -8,7 +8,7 @@ numpy==1.23.5
 pandas==1.5.3
 protobuf==3.19.6
 scipy==1.9.3
-tensorflow==2.10.1
+tensorflow==2.15.0
 tensorboard==2.10.1
 torch==1.13.1
 torchaudio==0.13.1
