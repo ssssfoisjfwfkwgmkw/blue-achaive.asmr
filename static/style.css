@@ -1,0 +1,93 @@
+/* 전체 페이지 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* 헤더 스타일 */
+header {
+    background: black;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #38b6ff;
+}
+
+/* 앨범 섹션 스타일 */
+.album-shelf {
+    padding: 40px;
+}
+
+.album-shelf h2 {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.album-shelf p {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* 선반 디자인 */
+.shelf {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: #f0f0f0;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 앨범 이미지 스타일 */
+.album {
+    text-align: center;
+    cursor: pointer;
+}
+
+.album img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.album img:hover {
+    transform: scale(1.1);
+}
+
+/* ASMR 제목 스타일 */
+.album p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 오디오 플레이어 컨테이너 */
+.audio-container {
+    margin-top: 30px;
+}
+
+#audio-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

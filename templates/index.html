@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개쩌는 ASMR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='animation.css') }}">  
+</head>
+<body>
+    <header>
+        <div class="logo">개쩌는 <span>ASMR (made.smb)</span></div>
+    </header>
+
+    <section class="album-shelf">
+        <h2>ASMR<br>BLUE ACHAIVE</h2>
+        <p>오호호오호호 완셍.</p>
+
+        <!-- 첫 번째 선반 -->
+        <div class="shelf">
+            <div class="album" onclick="playAudio('audio1.mp3', 'ASMR 1')">
+                <img src="{{ url_for('static', filename='images/OIP.png') }}" alt="Album 1">
+                <p>01.『 타이틀 콜 』유우카</p>
+            </div>
+            <div class="album" onclick="playAudio('audio2.mp3', 'ASMR 2')">
+                <img src="{{ url_for('static', filename='images/th (1).png') }}" alt="Album 2">
+                <p>02.『 작업 통화 하세요』유우카</p>
+            </div>
+            <div class="album" onclick="playAudio('audio3.mp3', 'ASMR 3')">
+                <img src="{{ url_for('static', filename='images/th (2).png') }}" alt="Album 3">
+                <p>03.『 지금부터 샬레에 가므로 』유우카</p>
+            </div>
+            <div class="album" onclick="playAudio('audio4.mp3', 'ASMR 4')">
+                <img src="{{ url_for('static', filename='images/th.png') }}" alt="Album 4">
+                <p>04.『 졸리지, 없습니다……』</p>
+            </div>
+            <div class="album" onclick="playAudio('audio5.mp3', 'ASMR 5')">
+                <img src="{{ url_for('static', filename='images/th (5).png') }}" alt="Album 5">
+                <p>05.『 몸풀기 』</p>
+            </div>
+        </div>
+
+        <!-- 두 번째 선반 -->
+        <div class="shelf">
+            <div class="album" onclick="playAudio('audio6.mp3', 'ASMR 6')">
+                <img src="{{ url_for('static', filename='images/th (4).png') }}" alt="Album 6">
+                <p>06.『 검은 고양이 지도의 세수 』카즈사</p>
+            </div>
+            <div class="album" onclick="playAudio('audio7.mp3', 'ASMR 7')">
+                <img src="{{ url_for('static', filename='images/th (3).png') }}" alt="Album 7">
+                <p>07.『 배후에 향기가 그녀의 기미 』카즈사</p>
+            </div>
+            <div class="album" onclick="playAudio('audio8.mp3', 'ASMR 8')">
+                <img src="{{ url_for('static', filename='images/th (6).png') }}" alt="Album 8">
+                <p>08.여고생에게 배우는 스킨케어 카즈사</p>
+            </div>
+            <div class="album" onclick="playAudio('audio9.mp3', 'ASMR 9')">
+                <img src="{{ url_for('static', filename='images/th (7).png') }}" alt="Album 9">
+                <p>09.『 항상 수고 많습니다. 』카즈사</p>
+            </div>
+            <div class="album" onclick="playAudio('audio10.mp3', 'ASMR 10')">
+                <img src="{{ url_for('static', filename='images/q.png') }}" alt="Album 10">
+                <p>10.『 스트레칭, 도움을 주세요 』미야코</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 오디오 플레이어 -->
+    <div class="audio-container">
+        <h3 id="audio-title">선택한 ASMR 제목</h3>
+        <audio id="audioPlayer" controls>
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function playAudio(filename, title) {
+            var audio = document.getElementById("audioPlayer");
+            var audioTitle = document.getElementById("audio-title");
+            audio.src = "/audio?file=" + filename;
+            audio.play();
+            audioTitle.textContent = title; // 선택한 ASMR 제목 표시
+        }
+    </script>
+</body>
+</html>
+
+
