@@ -4,7 +4,8 @@ from flask import Flask, render_template, send_file, request, jsonify, abort
 app = Flask(__name__)
 
 # 📁 MP3 파일들이 저장된 폴더 경로 (이 부분을 네가 사용하는 경로로 변경!)
-MP3_FOLDER = r"C:\server\blue achaive\amr"
+MP3_FOLDER = MP3_FOLDER = os.path.join(os.getcwd(), "smr")  
+
 
 @app.route('/')
 def index():
