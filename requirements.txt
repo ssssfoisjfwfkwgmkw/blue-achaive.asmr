@@ -9,10 +9,11 @@ pandas==2.2.3
 protobuf==3.19.6  # TensorFlow와 호환되는 버전
 scipy==1.13.1
 tensorflow==2.15.0
-tensorboard==2.10.1
 torch==2.3.0  # CUDA 없이 CPU 버전
 torchaudio==2.3.0
 torchvision==0.18.0
 tqdm==4.66.4
 requests==2.32.3
+gunicorn==21.2.0  # Render 배포 시 안정적인 WSGI 서버 (필수)
+
 
